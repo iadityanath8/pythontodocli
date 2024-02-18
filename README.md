@@ -15,7 +15,7 @@ This is a simple command-line todo application that allows users to manage their
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/todo-app.git
+   git clone https://github.com/iadityanath8/pythontodocli
 
 
 ## Install Dependencies
