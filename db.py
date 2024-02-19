@@ -35,9 +35,12 @@ class Todo_DB:
     def id_exist(self,id):
         try:
             cursor = self.conn.cursor()
-            cursor.execute(F"SELECT COUNT(*) FROM todos WHERE id = {id}")
-            count = cursor.fetchone()[0]
-            return count > 0
+            cursor.execute("SELECT * FROM todos WHERE id = ?", (id,))
+            result = cursor.fetchone()
+            if result:
+                return True
+            else:
+                return False
         except sqlite3.Error as e:
             print(Color.RED + e + Color.RESET)
             return False

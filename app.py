@@ -44,10 +44,7 @@ def cli():
             print(Color.GREEN + "please enter the todo id you want to be completed -> " + Color.RESET)
             
             a = input()
-            if dbins.id_exist(a) == False:
-                print(Color.RED + "Id does not exist" + Color.RESET)
-            else:
-                dbins.add_todo(a)
+            dbins.add_todo(a)
 
         elif choice == "3":
             id = int(input(Color.GREEN + "Please provide us the todo id which need to be reomved -> " + Color.RESET))
